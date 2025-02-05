@@ -145,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
         FaceDetectorManager.processImage(image, this, new ImageProcessingCallback() {
             @Override
             public void onSuccess(List<Face> faces) {
+
                 if (faces != null && !faces.isEmpty()) {
                     if (faces.size() >= 1) {
                         imgFaceDetector.setBackgroundResource(R.drawable.circular_farme_green);
@@ -157,6 +158,8 @@ public class MainActivity extends AppCompatActivity {
                     imgFaceDetector.setBackgroundResource(R.drawable.circular_farme_red);
                     txtFaceDetectHeading.setText(R.string.no_face_detect_heading);
                 }
+                imageProxy.close();
+
             }
 
             @Override
