@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Face Detector</string>
+    <string name="no_face_detect_heading">No Face Detected\nPlease Align Your Face Properly</string>
+    <string name="face_detected">Face Detected</string>
+</resources>
